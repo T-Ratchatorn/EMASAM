@@ -1,0 +1,4 @@
+_TO_BE_DELETED/
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
