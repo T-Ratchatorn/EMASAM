@@ -1,11 +1,11 @@
-# EMASAM
+# EMASAM: a Computationally Efficient Sharpness-Aware Minimization via EMA-Guided Perturbations
 
 This repository contains reproduction code for the research paper titled **"EMASAM: a Computationally Efficient Sharpness-Aware Minimization via EMA-Guided Perturbations"**.  
 Exponential Moving Average Sharpness-Aware Minimization (EMASAM) is a computationally efficient alternative to SAM. Unlike SAM, EMASAM does not depend on loss-gradient information during the perturbation step. Instead, it determines the perturbation direction based on the difference between the current model parameters and those of an EMA-based shadow model, which serves as a stable reference.
 By driving the parameters away from a temporally smoothed reference toward a less stable region, the resulting perturbation acts as an efficient approximation for the worst-case direction.
 
 The paper has been accepted at the International Conference on Pattern Recognition (ICPR) 2026
-Project Page: http://www.vip.sc.e.titech.ac.jp/proj/AACE/AACE.html  
+Project Page: https://www.vip.sc.eng.isct.ac.jp/proj/EMASAM
 
 ## Training
 Use this commands to train a model.  
