@@ -5,6 +5,7 @@ Exponential Moving Average Sharpness-Aware Minimization (EMASAM) is a computatio
 By driving the parameters away from a temporally smoothed reference toward a less stable region, the resulting perturbation acts as an efficient approximation for the worst-case direction.
 
 The paper has been accepted at the International Conference on Pattern Recognition (ICPR) 2026
+
 Project Page: https://www.vip.sc.eng.isct.ac.jp/proj/EMASAM
 
 ## Training
