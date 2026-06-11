@@ -74,7 +74,7 @@ def load_pretrain(model, model_name, data_name, chkpt_path):
             
 
 def test(model_name, dataset_name, gpu, threads, chkpt_path, tsubame_id):
-    DATASET_NUM_CLASSES = {"cifar10": 10, "cifar100": 100, "fashionmnist": 10, "emnist": 47, "imagenet": 1000}
+    DATASET_NUM_CLASSES = {"cifar10": 10, "cifar100": 100, "fashionmnist": 10, "emnist": 47, "imagenet_1k": 1000}
     cfg_test = {}
     cfg_test["num_classes"] = DATASET_NUM_CLASSES[dataset_name]
     
