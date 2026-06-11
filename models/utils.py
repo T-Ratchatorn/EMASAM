@@ -20,7 +20,7 @@ def get_model(model_name, data_name, **cfg ):
         else:
             raise NotImplementedError(name)
 
-    elif data in ["fashionmnist","emnist"]:
+    elif data in ["fashionmnist", "emnist"]:
         if( name == "resnet18" ):
             model = ResNet18(cfg['num_classes'], 1)
         elif( name == "resnet50" ):

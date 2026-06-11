@@ -28,8 +28,8 @@ class emnist:
             self.train_set = torchvision.datasets.EMNIST(root=f'/local/{self.tsubame_id}/data_emnist', split='balanced', train=True, download=True, transform=train_transform)
             self.test_set = torchvision.datasets.EMNIST(root=f'/local/{self.tsubame_id}/data_emnist', split='balanced', train=False, download=True, transform=test_transform)
         else:
-            self.train_set = torchvision.datasets.EMNIST(root='./data_emnist', split='balanced', train=True, download=True, transform=train_transform)
-            self.test_set = torchvision.datasets.EMNIST(root='./data_emnist', split='balanced', train=False, download=True, transform=test_transform)
+            self.train_set = torchvision.datasets.EMNIST(root='./data/emnist', split='balanced', train=True, download=True, transform=train_transform)
+            self.test_set = torchvision.datasets.EMNIST(root='./data/emnist', split='balanced', train=False, download=True, transform=test_transform)
 
         if is_DDP:
             self.train = DataLoader(self.train_set, batch_size=batch_size, shuffle=False, num_workers=threads, pin_memory=True, sampler=DistributedSampler(self.train_set))

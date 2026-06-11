@@ -29,7 +29,7 @@ parser.add_argument("--chkpt_freq", type=int, default="0")
 parser.add_argument("--prev_check_rm", action='store_true', default=False)
 parser.add_argument('--num_worker', type=int, default=4)
 parser.add_argument("--gpu", type=int, default=0)
-parser.add_argument("--tsubame_id", type=str, default=None) #only when using ScienceTokyo's Tsubame supercomputer
+parser.add_argument("--tsubame_id", type=str, default=None, help="leave it = None, used only when running on ScienceTokyo's Tsubame supercomputer")
 
 parser.add_argument('--verbose', action='store_true', default=False)
 parser.add_argument('--random_seed', type=int, default=42)

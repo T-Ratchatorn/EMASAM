@@ -1,5 +1,5 @@
-batch_size: 256
-dataset: cifar100 # cifar10 / cifar100 / fashionmnist / emnist / imagenet_1k
+batch_size: 32
+dataset: cifar10 # cifar10 / cifar100 / fashionmnist / emnist / imagenet_1k
 ema_alpha: 0.99
 ema_sch_end: 20
 ema_sch_start: 0
@@ -9,7 +9,7 @@ label_smoothing: 0.1
 loss: ce
 method: emasam # emasam / ema_orig / vanilla
 model: ResNet18 # ResNet18 / ResNet50 / WideResNet / PyramidNet / vit_b_16
-num_classes: 100
+num_classes: 10
 opt: sgd
 opt_lr: 0.1
 opt_momentum: 0

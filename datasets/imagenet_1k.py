@@ -42,8 +42,13 @@ class imagenet_1k:
             transforms.ToTensor(),
             transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
         ])
-        self.train_set = torchvision.datasets.ImageNet(root=f'/local/{self.tsubame_id}/ImageNet-1k', split="train", transform=train_transform)
-        self.test_set = torchvision.datasets.ImageNet(root=f'/local/{self.tsubame_id}/ImageNet-1k', split="val", transform=test_transform)
+        
+        if self.tsubame_id:
+            self.train_set = torchvision.datasets.ImageNet(root=f'/local/{self.tsubame_id}/ImageNet-1k', split="train", transform=train_transform)
+            self.test_set = torchvision.datasets.ImageNet(root=f'/local/{self.tsubame_id}/ImageNet-1k', split="val", transform=test_transform)
+        else:
+            self.train_set = torchvision.datasets.ImageNet(root='./data/ImageNet-1k', split="train", transform=train_transform)
+            self.test_set = torchvision.datasets.ImageNet(root='./data/ImageNet-1k', split="val", transform=test_transform)
 
         if is_DDP:
             self.train = DataLoader(self.train_set, batch_size=batch_size, shuffle=False, num_workers=threads, pin_memory=True, sampler=DistributedSampler(self.train_set))

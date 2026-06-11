@@ -1,4 +1,7 @@
 _TO_BE_DELETED/
 .ipynb_checkpoints/
+pretrained_weight/
+data/
+outputs/
 __pycache__/
 *.pyc
