@@ -9,12 +9,26 @@ The paper has been accepted at the International Conference on Pattern Recogniti
 Project Page: https://www.vip.sc.eng.isct.ac.jp/proj/EMASAM
 
 ## Training
-Use this commands to train a model.  
+Use this command to train a model from scratch using the EMASAM method.  
 
-Standard training:
+EMASAM training:
 ```bash
 python train.py --config <PATH_TO_CONFIG_FILE> --log_dir <RESULT_DIRECTORY> --log_name <LOG_NAME>
 ```
+For additional details on all parameters, please see [train.py](train.py)
+
+## Testing
+To obtain the results as shown in the paper, run the following command for inferencing using a pre-trained model trained by EMASAM.
+```bash
+python test.py --model <MODEL_NAME> --dataset <DATASET_NAME>
+```
+
+MODEL_NAME: "ResNet18", "ResNet50", "WideResNet", "PyramidNet", "ViT_b_16"
+
+DATASET_NAME: "cifar10", "cifar100", "fashionmnist", "emnist", "imagenet"
+
+
+For additional details on all parameters, please see [test.py](test.py)
 
 ## Citation
 Tanapat Ratchatorn and Masayuki Tanaka, **“EMASAM: a Computationally Efficient Sharpness-Aware Minimization via EMA-Guided Perturbations”**, International Conference on Pattern Recognition (ICPR), August, 2026.
