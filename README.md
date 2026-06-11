@@ -37,8 +37,7 @@ The checkpoints can also be manually download [HERE](https://drive.google.com/dr
 
 **DATASET_NAME**: "cifar10", "cifar100", "fashionmnist", "emnist"
 
-Note: ImageNet-1k experiments, use DATASET_NAME: "imagenet_1k" and MODEL_NAME: "resnet50", "vit_b_16"
-
+Note: For ImageNet-1k experiments, use DATASET_NAME: "imagenet_1k" and MODEL_NAME: "resnet50", "vit_b_16"
 
 For additional details on all parameters, please see [test.py](test.py)
 
