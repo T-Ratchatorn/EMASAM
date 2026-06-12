@@ -21,25 +21,30 @@ EMASAM training:
 ```bash
 python train.py --config <PATH_TO_CONFIG_FILE> --log_dir <RESULT_DIRECTORY> --log_name <LOG_NAME>
 ```
-For additional details on all parameters, please see [train.py](train.py)
+<PATH_TO_CONFIG_FILE>: Path to config YAML file.
+
+<RESULT_DIRECTORY>: Preferred directory for training outputs.
+
+<LOG_NAME>: Preferred log file name.
+
+For additional details on all arguments, please see [train.py](train.py)
 
 ## Testing
 To obtain the results as shown in the paper, run the following command for inferencing using a pre-trained model trained by EMASAM.
 ```bash
 python test.py --model <MODEL_NAME> --dataset <DATASET_NAME>
 ```
+**<MODEL_NAME>**: ["resnet18", "resnet50", "wideresnet", "pyramidnet"]
+
+**<DATASET_NAME>**: "cifar10", "cifar100", "fashionmnist", "emnist"
+
+Note: For **ImageNet-1k** experiments, use <DATASET_NAME>: "imagenet_1k" and <MODEL_NAME>: "resnet50", "vit_b_16"
+
 The script automatically downloads the corresponding pre-trained checkpoint to **"./pretrained_weight/EMASAM_<MODEL_NAME>_<DATASET_NAME>.pth"** and uses it for evaluation.
 
 The checkpoints can also be manually download [HERE](https://drive.google.com/drive/folders/1VfdF6WhEUyWZ1HvOlRui9mPhb0HS2Uza)
 
-
-**MODEL_NAME**: "resnet18", "resnet50", "wideresnet", "pyramidnet"
-
-**DATASET_NAME**: "cifar10", "cifar100", "fashionmnist", "emnist"
-
-Note: For ImageNet-1k experiments, use DATASET_NAME: "imagenet_1k" and MODEL_NAME: "resnet50", "vit_b_16"
-
-For additional details on all parameters, please see [test.py](test.py)
+For additional details on all arguments, please see [test.py](test.py)
 
 ## Citation
 Tanapat Ratchatorn and Masayuki Tanaka, **“EMASAM: a Computationally Efficient Sharpness-Aware Minimization via EMA-Guided Perturbations”**, International Conference on Pattern Recognition (ICPR), August, 2026.
